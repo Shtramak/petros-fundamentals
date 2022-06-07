@@ -34,6 +34,14 @@ class SortingUtilsTest {
     }
 
     @Test
+    void ifOneElementThenSortedForkJoinMergeSort() {
+        var generatedValue = ThreadLocalRandom.current().nextInt();
+        int[] array = {generatedValue};
+        SortingUtils.forkJoinMergeSort(array);
+        assertThat(array).isEqualTo(new int[]{generatedValue});
+    }
+
+    @Test
     void ifRandomElementsThenSortedInsertionSort() {
         int[] array = IntStream.generate(() -> ThreadLocalRandom.current().nextInt()).limit(100).toArray();
         int[] sortedArray = Arrays.stream(array)
@@ -64,6 +72,16 @@ class SortingUtilsTest {
     }
 
     @Test
+    void ifRandomElementsThenSortedForkJoinMergeSort() {
+        int[] array = IntStream.generate(() -> ThreadLocalRandom.current().nextInt()).limit(100).toArray();
+        int[] sortedArray = Arrays.stream(array)
+                .sorted()
+                .toArray();
+        SortingUtils.forkJoinMergeSort(array);
+        assertThat(array).isEqualTo(sortedArray);
+    }
+
+    @Test
     void ifReverseSortedThenSortedInsertionSort() {
         int[] array = {9,8,7,6,5,4,3,2,1};
         int[] sortedArray = Arrays.stream(array)
@@ -90,6 +108,16 @@ class SortingUtilsTest {
                 .sorted()
                 .toArray();
         SortingUtils.mergeSort(array);
+        assertThat(array).isEqualTo(sortedArray);
+    }
+
+    @Test
+    void ifReverseSortedThenSortedForkJoinMergeSort() {
+        int[] array = {9,8,7,6,5,4,3,2,1};
+        int[] sortedArray = Arrays.stream(array)
+                .sorted()
+                .toArray();
+        SortingUtils.forkJoinMergeSort(array);
         assertThat(array).isEqualTo(sortedArray);
     }
 
