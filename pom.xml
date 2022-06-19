@@ -12,6 +12,7 @@
         <module>java-fundamentals-util</module>
         <module>module-fundamentals</module>
         <module>module-web</module>
+        <module>java-web-util</module>
     </modules>
 
     <properties>
