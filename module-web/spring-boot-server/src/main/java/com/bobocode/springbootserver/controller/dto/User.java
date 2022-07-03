@@ -1,10 +1,14 @@
 package com.bobocode.springbootserver.controller.dto;
 
 
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
-    String firstName;
-    String lastName;
+    private String firstName;
+    private String lastName;
 }

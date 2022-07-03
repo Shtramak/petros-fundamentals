@@ -13,6 +13,7 @@
         <module>module-fundamentals</module>
         <module>module-web</module>
         <module>java-web-util</module>
+        <module>module-web/spring-boot-server</module>
     </modules>
 
     <properties>

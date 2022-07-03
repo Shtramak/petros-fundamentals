@@ -1,9 +1,13 @@
 package com.bobocode.springbootserver.controller.dto;
 
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserPicture {
-    User user;
-    Picture picture;
+    private User user;
+    private Picture picture;
 }
