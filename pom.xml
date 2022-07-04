@@ -15,6 +15,7 @@
         <module>java-web-util</module>
         <module>module-web/spring-boot-server</module>
         <module>module-web/servlet-server</module>
+        <module>module-web/dispatcher-servlet-initializer</module>
     </modules>
 
     <properties>
