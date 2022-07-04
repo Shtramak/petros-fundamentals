@@ -14,6 +14,7 @@
         <module>module-web</module>
         <module>java-web-util</module>
         <module>module-web/spring-boot-server</module>
+        <module>module-web/servlet-server</module>
     </modules>
 
     <properties>
